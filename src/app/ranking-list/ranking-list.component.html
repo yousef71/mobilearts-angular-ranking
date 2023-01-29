@@ -1,0 +1,20 @@
+<header>
+    <div class="filter-container">
+      <app-ranking-list-filter-bar  ></app-ranking-list-filter-bar>
+    </div>
+</header>
+
+<div class="container mt-5">
+    <div class="row" *ngIf="rankings.length>1">
+        <app-ranking-list-item (click)="goToDetail(product)" *ngFor="let product of rankings" [product]="product" class="col-md-4 col-lg-4 mx-auto justify-content-center single-app">
+        </app-ranking-list-item>
+    </div>
+    <div *ngIf="rankings.length<=1" class="noresult">NO RESULTS FOUND</div>
+</div>
+
+
+
+
+
+
+

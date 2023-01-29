@@ -1,0 +1,28 @@
+<div class="container mt-2 mb-2">
+    <div class="child">
+        <img  src={{singleapp.icon_url}} alt="App Photo" class="main-img">
+     </div>
+
+     <div class="child">
+        <div>App Name : {{singleapp.app_name}}</div>
+        <ngb-rating rate={{singleapp.all_rating}} readonly="true" max="5"></ngb-rating>
+    </div>
+
+    <div class="child">
+        <div>Publisher Name : {{singleapp.publisher_name}}</div>
+        <div>Genres:
+            <span *ngFor="let item of singleapp.genres; let i = index">
+              {{item}}<span *ngIf="i !== singleapp.genres.length - 1">, </span>
+            </span>
+          </div>
+    </div>
+</div>
+
+<p class="desc">Description: <span>{{singleapp.description}}</span></p>
+
+<div class="image-container">
+  <img *ngFor="let url of singleapp.screenshot_urls" [src]="url" class="image col-md-4" >
+</div>
+
+
+

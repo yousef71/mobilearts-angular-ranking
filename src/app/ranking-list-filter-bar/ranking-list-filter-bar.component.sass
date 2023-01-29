@@ -1,0 +1,50 @@
+$break-phone: 420px
+#button-show-filter
+  display: none
+@media screen and (max-width: $break-phone)
+  .filter-bar
+    display: none
+  .filter-bar.active
+    display: block
+  #button-show-filter
+    display: block
+.filter-bar-item
+  font-family: Raleway, serif
+  padding: 15px
+  background: #f6f6f6
+  margin: 5px
+  border-radius: 10px
+
+.filter-bar-item>h1
+  font-size: 16px
+  font-weight: bolder
+
+.container
+  display: flex
+  justify-content: center
+  align-items: center
+
+
+.child
+  flex: 1
+  margin-right:5px
+  margin-left:5px
+
+.operatingsystem
+    border: black
+    width: 100px
+    border-style: solid
+    border-width: 1px
+    border-radius: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+
+.single-op
+    text-align: center
+    flex: 1
+    cursor: pointer
+
+.border-right 
+    border-right: 1px solid black!important
+  
